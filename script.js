@@ -101,6 +101,7 @@ function arrayMaker(hours, max, min, avg){
 //makes a new list printing out a day's sales at a single store
 function storeDay(store){
 	var cByHour = arrayMaker(store.hours.length, store.maxCust, store.minCust, store.avg);
+	var sum = 0;
 
 	//adds new ul with name of store
 	var ulEl = document.createElement("ul");
@@ -112,7 +113,10 @@ function storeDay(store){
 		var liEl = document.createElement("li");
 		liEl.innerHTML = store.hours[i] + ": " + cByHour[i] + " cookies";
 		dBox.lastChild.appendChild(liEl);
+		sum += cByHour[i];
 	}
+	liEl.innerHTML = "Total: " + sum + " cookies";
+	dBox.lastChild.appendChild(liEl);
 }
 
 //prints out the data for every store!
