@@ -1,0 +1,38 @@
+header {
+	width: 100%;
+	position: relative;
+}
+
+.logo{
+	width: 25%;
+}
+
+.flipped{
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+#logo2{
+	float: right;
+}
+
+#titleBox {
+	text-align: center;
+	width: 50%;
+}
+#dataBox > ul{
+	font-weight: bold;
+	border: 2px solid black;
+	margin-bottom: 20px;
+}
+
+#dataBox li {
+	font-weight: normal;
+	margin-top: 10px;
+	/*text-indent: 10px*/
+	
+}
