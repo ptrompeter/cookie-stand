@@ -1,5 +1,6 @@
 body {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+	background-color: #FFC573;
 }
 
 header {
@@ -34,17 +35,26 @@ header h1 {
 	-ms-filter: "FlipH";
 }
 
+#dataBox {
+	/*background-color: #AE6133;*/
+	background-color: #38293A;
+	font-size: 2em;
+	color: #FE7933;
+}
 
 #dataBox > ul{
 	font-weight: bold;
+	font-size: .75em;
 	border: 2px solid black;
 	margin-bottom: 20px;
+	background-color: #9A3221;
+	color: #FFC573;
 }
 
 #dataBox li {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-weight: normal;
 	margin-top: 10px;
-	/*text-indent: 10px*/
+	font-size: .75em;
 	
 }
