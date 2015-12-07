@@ -4,7 +4,9 @@ console.log('Loaded');
 
 var dBox = document.getElementById("dataBox");
 
+//variables I need above the store elements
 
+var hours1 = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 // Hard Coded store elements.
 
 var pikePl = {
@@ -12,7 +14,7 @@ var pikePl = {
 	minCust: 17,
 	maxCust: 88,
 	avg: 5.2,
-	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
+	hours: hours1,
 	randCust: function(max, min){
 		var seed = Math.random();
 		return Math.floor(seed * (max - min) + min);
@@ -24,7 +26,7 @@ var seaTac = {
 	minCust: 6,
 	maxCust: 44,
 	avg: 1.2,
-	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
+	hours: hours1,
 	randCust: function(max, min){
 		var seed = Math.random();
 		return Math.floor(seed * (max - min) + min);
@@ -36,7 +38,7 @@ var southC = {
 	minCust: 11,
 	maxCust: 44,
 	avg: 1.9,
-	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
+	hours: hours1,
 	randCust: function(max, min){
 		var seed = Math.random();
 		return Math.floor(seed * (max - min) + min);
@@ -48,7 +50,7 @@ var bellSq = {
 	minCust: 20,
 	maxCust: 48,
 	avg: 3.3,
-	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
+	hours: hours1,
 	randCust: function(max, min){
 		var seed = Math.random();
 		return Math.floor(seed * (max - min) + min);
@@ -60,7 +62,7 @@ var alki = {
 	minCust: 3,
 	maxCust: 24,
 	avg: 2.6,
-	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
+	hours: hours1,
 	randCust: function(max, min){
 		var seed = Math.random();
 		return Math.floor(seed * (max - min) + min);
