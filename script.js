@@ -7,6 +7,24 @@ var dBox = document.getElementById("dataBox");
 //variables I need above the store elements
 
 var hours1 = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+
+//Building a store constructor
+var StoreMaker = function(name, min, max, avg, hours) {
+	this.name = name;
+	this.minCust = min;
+	this.maxCust = max;
+	this.avg = avg;
+	this.hours = hours;
+};
+
+// Prototyping a randCust method
+StoreMaker.prototype.randCust = function(max, min){
+	var seed = Math.random();
+	return Math.floor(seed * (max - min) + min);
+};
+StoreMaker.prototype.storePush = function(){
+	stores.push(this);
+};
 // Hard Coded store elements.
 
 var pikePl = {
