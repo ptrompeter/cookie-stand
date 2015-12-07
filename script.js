@@ -14,10 +14,7 @@ var pikePl = {
 	avg: 5.2,
 	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
 	randCust: function(max, min){
-		console.log(max);
-		console.log(min);
 		var seed = Math.random();
-		console.log(seed);
 		return Math.floor(seed * (max - min) + min);
 	}
 };
@@ -29,10 +26,7 @@ var seaTac = {
 	avg: 1.2,
 	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
 	randCust: function(max, min){
-		console.log(max);
-		console.log(min);
 		var seed = Math.random();
-		console.log(seed);
 		return Math.floor(seed * (max - min) + min);
 	}
 };
@@ -44,10 +38,7 @@ var southC = {
 	avg: 1.9,
 	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
 	randCust: function(max, min){
-		console.log(max);
-		console.log(min);
 		var seed = Math.random();
-		console.log(seed);
 		return Math.floor(seed * (max - min) + min);
 	}
 };
@@ -59,10 +50,7 @@ var bellSq = {
 	avg: 3.3,
 	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
 	randCust: function(max, min){
-		console.log(max);
-		console.log(min);
 		var seed = Math.random();
-		console.log(seed);
 		return Math.floor(seed * (max - min) + min);
 	}
 };
@@ -74,10 +62,7 @@ var alki = {
 	avg: 2.6,
 	hours: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'],
 	randCust: function(max, min){
-		console.log(max);
-		console.log(min);
 		var seed = Math.random();
-		console.log(seed);
 		return Math.floor(seed * (max - min) + min);
 	}
 };
