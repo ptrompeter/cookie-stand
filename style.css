@@ -1,4 +1,4 @@
-mbody {
+body {
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	background-color: #FFC573;
 }
@@ -40,21 +40,29 @@ header h1 {
 	background-color: #38293A;
 	font-size: 2em;
 	color: #FE7933;
+	margin: 1em;
+	padding: 1em 0em 2em 1em;
 }
 
-#dataBox > ul{
+table{
 	font-weight: bold;
 	font-size: .75em;
 	border: 2px solid black;
 	margin-bottom: 20px;
+	padding-left: 10px;
 	background-color: #9A3221;
 	color: #FFC573;
 }
 
-#dataBox li {
+table tr {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-weight: normal;
 	margin-top: 10px;
 	font-size: .75em;
 	
+}
+
+#tHead {
+	border: 1px solid black;
+	border-collapse: collapse;
 }

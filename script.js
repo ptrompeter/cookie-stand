@@ -66,7 +66,7 @@ function tblRow(store){
 		// console.log(tdEl);
 		trEl.appendChild(tdEl);
 	}
-	thBox.appendChild(trEl);
+	tbBox.appendChild(trEl);
 }
 
 //this function renders a full table of daily sales data.
@@ -75,6 +75,7 @@ function fullTbl(stores){
 	var topLineArray = arrayMaker(stores[0].hours.length, stores[0].maxCust, stores[0].minCust, stores[0].avg);
 	var sum = 0;
 	var trEl = document.createElement("tr");
+
 	for (var i=0; i < topLineArray.length + 2; i++){
 		var thEl = document.createElement("th");
 		if (i === 0) {
@@ -84,7 +85,7 @@ function fullTbl(stores){
 		} else {
 			thEl.innerHTML = stores[0].hours[i-1];
 		}
-		// console.log(thEl);
+
 		trEl.appendChild(thEl);
 	}
 	thBox.appendChild(trEl);
@@ -94,36 +95,36 @@ function fullTbl(stores){
 }
 
 //makes a new list printing out a day's sales at a single store
-function storeDay(store){
-	var cByHour = arrayMaker(store.hours.length, store.maxCust, store.minCust, store.avg);
-	var sum = 0;
+// function storeDay(store){
+// 	var cByHour = arrayMaker(store.hours.length, store.maxCust, store.minCust, store.avg);
+// 	var sum = 0;
 
 
-	//adds new ul with name of store
-	var ulEl = document.createElement("ul");
-	ulEl.innerHTML = store.name;
-	dBox.appendChild(ulEl);
+// 	//adds new ul with name of store
+// 	var ulEl = document.createElement("ul");
+// 	ulEl.innerHTML = store.name;
+// 	dBox.appendChild(ulEl);
 
-	//adds list elements to ul with report by hours.
-	for (i = 0; i < store.hours.length ; i++){
-		var liEl = document.createElement("li");
-		liEl.innerHTML = store.hours[i] + ": " + cByHour[i] + " cookies";
-		dBox.lastChild.appendChild(liEl);
-		sum += cByHour[i];
-	}
-	liEl.innerHTML = "Total: " + sum + " cookies";
-	dBox.lastChild.appendChild(liEl);
-}
+// 	//adds list elements to ul with report by hours.
+// 	for (i = 0; i < store.hours.length ; i++){
+// 		var liEl = document.createElement("li");
+// 		liEl.innerHTML = store.hours[i] + ": " + cByHour[i] + " cookies";
+// 		dBox.lastChild.appendChild(liEl);
+// 		sum += cByHour[i];
+// 	}
+// 	liEl.innerHTML = "Total: " + sum + " cookies";
+// 	dBox.lastChild.appendChild(liEl);
+// }
 
-//prints out the data for every store!
-function allStores(stores){
-	for (var j = 0; j < stores.length; j++){
-		storeDay(stores[j]);
-	}
-}
+// //prints out the data for every store!
+// function allStores(stores){
+// 	for (var j = 0; j < stores.length; j++){
+// 		storeDay(stores[j]);
+// 	}
+// }
 
-//function calls
-allStores(stores);
+// //function calls
+// allStores(stores);
 // salesTbl(pikePl);
 // for (key in stores[0]){
 // 	console.log(key);
