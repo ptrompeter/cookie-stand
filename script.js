@@ -2,6 +2,9 @@ console.log('Loaded');
 
 // Element grabbers
 
+var elForm = document.getElementById("storeForm");
+var elName = document.getElementById('subBut');
+
 var dBox = document.getElementById("dataBox");
 var tBox = document.getElementById("table");
 var thBox = document.getElementById("tHead");
@@ -25,7 +28,7 @@ var Store = function(name, min, max, avg, hours) {
 // Prototyping a randCust method
 Store.prototype.randCust = function(max, min){
 	var seed = Math.random();
-	return Math.floor(seed * (max - min) + min);
+	return Math.floor(seed * (max - min + 1) + min);
 };
 
 var pikePl = new Store("Pike Place Market", 17, 88, 5.2, hours1);
@@ -50,10 +53,9 @@ function arrayMaker(hours, max, min, avg){
 function tblRow(store){
 	//makes an array of a day at a store
 	var cByHour = arrayMaker(store.hours.length, store.maxCust, store.minCust, store.avg);
-	console.log(cByHour);
 	var sum = 0;
 	var trEl = document.createElement("tr");
-	for (i=0; i < cByHour.length + 2; i++){
+	for (var i=0; i < cByHour.length + 2; i++){
 		var tdEl = document.createElement("td");
 		if (i === 0) {
 			tdEl.innerHTML = store.name; 
@@ -94,40 +96,11 @@ function fullTbl(stores){
 	}
 }
 
-//makes a new list printing out a day's sales at a single store
-// function storeDay(store){
-// 	var cByHour = arrayMaker(store.hours.length, store.maxCust, store.minCust, store.avg);
-// 	var sum = 0;
-
-
-// 	//adds new ul with name of store
-// 	var ulEl = document.createElement("ul");
-// 	ulEl.innerHTML = store.name;
-// 	dBox.appendChild(ulEl);
-
-// 	//adds list elements to ul with report by hours.
-// 	for (i = 0; i < store.hours.length ; i++){
-// 		var liEl = document.createElement("li");
-// 		liEl.innerHTML = store.hours[i] + ": " + cByHour[i] + " cookies";
-// 		dBox.lastChild.appendChild(liEl);
-// 		sum += cByHour[i];
-// 	}
-// 	liEl.innerHTML = "Total: " + sum + " cookies";
-// 	dBox.lastChild.appendChild(liEl);
-// }
-
-// //prints out the data for every store!
-// function allStores(stores){
-// 	for (var j = 0; j < stores.length; j++){
-// 		storeDay(stores[j]);
-// 	}
-// }
-
-// //function calls
-// allStores(stores);
-// salesTbl(pikePl);
-// for (key in stores[0]){
-// 	console.log(key);
 fullTbl(stores);
+elForm.addEventListener('submit', function(e){
+	e.preventDefault();
+	var newStore = new Store(e.target.sName.value, parseInt(e.target.min.value), parseInt(e.target.max.value), parseInt(e.target.avg.value), hours1);
+	tblRow(stores[stores.length - 1]);
+});
 
 
