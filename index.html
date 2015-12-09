@@ -12,13 +12,16 @@
 		<h1>Pat's Salmon Cookies</h1>
 		<img src="./img/salmon.png" id="logo2" class="logo flipped">
 	</header>
-	<section id = "entryBox"><h2>Add stores here. Enter the store name, minimum customers per hour, maximum customers per hour, and average cookies per customer. Then click submit.</h2>
+	<section id = "formBox"><h2>Add stores here. Enter the store name, minimum customers per hour, maximum customers per hour, and average cookies per customer. Then click submit.</h2>
 		<form id="storeForm">
-			<input type="text" name="sName" placeholder="store name">
-			<input type="text" name="min" placeholder="min CpH">
-			<input type="text" name="max" placeholder="max CpH">
-			<input type="text" name="avg" placeholder="avg CpC">
-			<button type="button">Submit!</button>	
+			<fieldset>
+			<legend>Enter new stores here.  Min/max data should be hourly; customer average is in cookies.</legend>
+				<label>Store name:<input type="text" id="sName" name="sName" placeholder="store name"></label>
+				<label>Min customers:<input type="text" id="min" name="min" placeholder="min CpH"></label>
+				<label>Max customers:<input type="text" id="max" name="max" placeholder="max CpH"></label>
+				<label>Customer Average:<input type="text" id="avg" name="avg" placeholder="avg CpC"></label>
+				<button type="submit" id="subBut">Submit!</button>	
+			</fieldset>
 		</form>
 	</section>
 
