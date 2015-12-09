@@ -106,12 +106,7 @@ function tblNameCheck(e, stores){
 		}
 	}	
 }
-
-fullTbl(stores);
-elForm.addEventListener('submit', function(e){
-	e.preventDefault();
-	if (tblNameCheck(e, stores)){
-		var index = tblNameCheck(e, stores)[1];
+function rowUpdate(e, stores, index){
 		stores[index].minCust = parseInt(e.target.min.value);
 		stores[index].maxCust = parseInt(e.target.max.value);
 		stores[index].avg = parseFloat(e.target.avg.value);
@@ -121,16 +116,20 @@ elForm.addEventListener('submit', function(e){
 		for (var k = 0 ; k < array.length ; k++){
 			sum += array[k];
 		}
-		console.log(array);
-		console.log(tblKids[index].innerHTML);
-		console.log(tblKids[index].childNodes);
+
 		for(var j = 0 ; j < array.length ; j++){
-			// console.log(tblKids);
-			tblKids[index].childNodes[j + 1].childNodes[0].innerHTML = array[j];
 			tblKids[index].childNodes[j + 1].childNodes[0].textContent = array[j];
 		}
-		tblKids[index].childNodes[array.length + 1].childNodes[0].innerHTML = sum;
-		tblKids[index].childNodes[array.length + 1].childNodes[0].textContent = sum;
+
+		tblKids[index].childNodes[array.length + 1].childNodes[0].textContent = sum;	
+}
+
+fullTbl(stores);
+elForm.addEventListener('submit', function(e){
+	e.preventDefault();
+	if (tblNameCheck(e, stores)){
+		var index = tblNameCheck(e, stores)[1];
+		rowUpdate(e, stores, index);
 	} else {
 		var newStore = new Store(e.target.sName.value, parseInt(e.target.min.value), parseInt(e.target.max.value), parseInt(e.target.avg.value), hours1);
 		tblRow(stores[stores.length - 1]);
