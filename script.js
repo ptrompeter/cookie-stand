@@ -10,6 +10,7 @@ var tBox = document.getElementById("table");
 var thBox = document.getElementById("tHead");
 var tbBox = document.getElementById("tBody");
 var bfBox = document.getElementById("tFoot");
+var tblKids = tbBox.childNodes;
 
 //variables I need above the store elements
 
@@ -41,6 +42,7 @@ var bellSq = new Store("Bellevue Square", 20, 48, 3.3, hours1);
 
 var alki = new Store("Alki", 3, 24, 2.6, hours1);
 
+//WARNING: the hours param here takes a NUMBER, not an array, so .length the argument
 function arrayMaker(hours, max, min, avg){
 	array = [];
 	for(var i=0; i < hours; i++){
@@ -96,11 +98,43 @@ function fullTbl(stores){
 	}
 }
 
+function tblNameCheck(e, stores){
+	for (var i = 0; i < stores.length ; i++){
+		if (e.target.sName.value.toLowerCase() === stores[i].name.toLowerCase()){
+			var output = [true, i];
+			return output;
+		}
+	}	
+}
+
 fullTbl(stores);
 elForm.addEventListener('submit', function(e){
 	e.preventDefault();
-	var newStore = new Store(e.target.sName.value, parseInt(e.target.min.value), parseInt(e.target.max.value), parseInt(e.target.avg.value), hours1);
-	tblRow(stores[stores.length - 1]);
+	if (tblNameCheck(e, stores)){
+		var index = tblNameCheck(e, stores)[1];
+		stores[index].minCust = parseInt(e.target.min.value);
+		stores[index].maxCust = parseInt(e.target.max.value);
+		stores[index].avg = parseFloat(e.target.avg.value);
+
+		var array = arrayMaker(stores[index].hours.length, stores[index].minCust, stores[index].maxCust, stores[index].avg);
+		var sum = 0;
+		for (var k = 0 ; k < array.length ; k++){
+			sum += array[k];
+		}
+		console.log(array);
+		console.log(tblKids[index].innerHTML);
+		console.log(tblKids[index].childNodes);
+		for(var j = 0 ; j < array.length ; j++){
+			// console.log(tblKids);
+			tblKids[index].childNodes[j + 1].childNodes[0].innerHTML = array[j];
+			tblKids[index].childNodes[j + 1].childNodes[0].textContent = array[j];
+		}
+		tblKids[index].childNodes[array.length + 1].childNodes[0].innerHTML = sum;
+		tblKids[index].childNodes[array.length + 1].childNodes[0].textContent = sum;
+	} else {
+		var newStore = new Store(e.target.sName.value, parseInt(e.target.min.value), parseInt(e.target.max.value), parseInt(e.target.avg.value), hours1);
+		tblRow(stores[stores.length - 1]);
+	}
 });
 
 
