@@ -1,43 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Salmon Cookies for Everyone</title>
-	<link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Pat's Salmon Cookies</title>
+  <meta name="Front Page for Pat's Salmon Cookies" content="">
+  <meta name="author" content="Patrick Trompeter">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" href="skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="sheet.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
 <body>
-	<nav></nav>
-	<header>
-		<img src="./img/salmon.png" id="logo1" class="logo">
-		<h1>Pat's Salmon Cookies</h1>
-		<img src="./img/salmon.png" id="logo2" class="logo flipped">
-	</header>
-	<section id = "formBox"><h2>Add stores here. Enter the store name, minimum customers per hour, maximum customers per hour, and average cookies per customer. Then click submit.</h2>
-		<form id="storeForm">
-			<fieldset>
-			<legend>Enter new stores here.  Min/max data should be hourly; customer average is in cookies.</legend>
-				<label>Store name:<input type="text" id="sName" name="sName" placeholder="store name"></label>
-				<label>Min customers:<input type="number" id="min" name="min" placeholder="min CpH"></label>
-				<label>Max customers:<input type="number" id="max" name="max" placeholder="max CpH"></label>
-				<label>Customer Average:<input type="number" id="avg" name="avg" placeholder="avg CpC"></label>
-				<button type="submit" id="subBut">Submit!</button>	
-			</fieldset>
-		</form>
-	</section>
 
-	<section id="dataBox">Daily Sales by Location:
-		<table id="table">
-			<thead id="tHead"></thead>
-			<tbody id="tBody"></tbody>
-			<tfoot id="tFoot"></tfoot>
-		</table>
-	</section>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <header class="row">
+    <main class ="row">
+    <aside class ="columns two">Placeholder text
+    </aside>
+    <section class = "columns eight" id="titleBox">
+      <h1 class = "row">Pat's Salmon Cookies</h1>
+      <h5 class = "row">Salmon cookies made with fish, <br>salmon cookies are delish!</h5> 
+    </section>
+    <aside class = "columns two">Placeholder text</aside>
+    </main>
+    <nav>
+      <button type="button">About Us</button>
+      <button type="button">Locations</button>
+      <button type="button">Catering</button>
+      <button type="button">Tours</button>
+    </nav>
+    </header>
+    <main>
+      <section class="row">
+        <div class ="columns eight"><img id="pikePlace" src="img/pike-place-market-at-night_1.jpg" /></div>
+        <article class = "columns four">
+        <h3 class= "row">What We Do</h3>
+        <p class="row">Salmon based-confections are a uniquely Pacific Northwest treat.  Pat's original salmon cookies were born in the Pike Place market, through a happy accident: Pat was eating a pink-frosted cookie when one of the Pike Place Market fishmongers pegged her right in the face with a coho.  After a year of intense development, Pat's Salmon Cookies was launched at our flagship location just a block away from where the idea was born.</p>
+        </article>
+      </section>
+      <section class="row">
+        <article class = "columns four">
+        <h3>Where we Are</h3>
+        <p>Located in the heart of the historic Pike Place Market, our flagship cookie shoppe houses a cafe and cookie shop, as well as our test-recipe kitchen.  You can stop in for a hot cup of something dark and a delicious, locally sourced salmon cookie and watch our design team develop our next sensational salmon-confection!</p>
+        <p>In addition to our flagship, we have neighborhood locations all over Seattle.  Click <a href="to locations">here</a> for full list of our locations and hours of operations.</p>
+        </article>
+         <div class ="columns eight"><img id="mug" src="img/coffee-shop-mug.jpg" /></div>       
+      </section>
+      <h4 class="row divider">~ More about us ~</h4>
+      <section class="row">
+        <div class = "columns four" id="menu">Our Menu</div>
+        <div class = "columns four">Box B</div>
+        <div class = "columns four">Box C</div>
+      </section>
+    </main>
+  </div>
 
-
-
-
-
-
-	<script type="text/javascript" src="script.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

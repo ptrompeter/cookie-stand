@@ -1,0 +1,51 @@
+/*body *{
+	border: 1px solid black;
+}
+*/
+body {
+	background-color: #737590;	
+}
+
+button {
+	background: none;
+	border: 3 px solid white;
+}
+header {
+	background-color: black;
+	margin-bottom: 1rem;
+}
+p {
+	text-align: justify;
+	padding: 1rem;
+	margin-bottom: 0;
+}
+h3 {
+	text-align: center;
+	margin-bottom: 0;
+}
+article {
+	background-color: #CAD6EF;
+}
+#titleBox{
+	text-align: center;
+}
+#titleBox > h1 {
+	color: #FECD2A;
+}
+#titleBox > h5 {
+	color: #E07BD5;
+}
+#pikePlace{
+	width: 100%;
+	margin-bottom: 1rem;
+}
+#mug{
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.divider {
+	background-color: #CC3A52;
+	color: #E79A0B;
+	text-align: center;
+	border-radius: 1rem;
+}
