@@ -17,6 +17,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,26 +37,26 @@
   <div class="container">
     <header class="row">
     <main class ="row">
-      <aside class ="columns two">Placeholder text
+      <aside class ="column one">placeholder
       </aside>
-      <section class = "columns eight" id="titleBox">
+      <section class = "columns ten" id="titleBox">
         <h1 class = "row">Pat's Salmon Cookies</h1>
-        <h5 class = "row">Salmon cookies made with fish, <br>salmon cookies are delish!</h5> 
+        <h5 class = "row">Salmon cookies made with fish, salmon cookies are delish!</h5> 
       </section>
-      <aside class = "columns two">Placeholder text</aside>
+      <aside class = "column one"></aside>
     </main>
     <nav>
-      <button type="button">About Us</button>
-      <button type="button">Locations</button>
-      <button type="button">Catering</button>
-      <button type="button">Tours</button>
+      <a href="#about"><button type="button" class="grow">About Us</button></a>
+      <a href="#locations"><button type="button" class="grow">Locations</button></a>
+      <button type="button" class="grow">Catering</button>
+      <button type="button" class="grow">Tours</button>
     </nav>
     </header>
     <main>
       <section class="row">
         <div class ="columns eight"><img id="pikePlace" src="img/pike-place-market-at-night_1.jpg" /></div>
         <article class = "columns four">
-        <h3 class= "row">What We Do</h3>
+        <h3 class= "row" id="about">What We Do</h3>
         <p class="row">Salmon based-confections are a uniquely Pacific Northwest treat.  Pat's original salmon cookies were born in the Pike Place market, through a happy accident: Pat was eating a pink-frosted cookie when one of the Pike Place Market fishmongers pegged her right in the face with a coho.  After a year of intense development, Pat's Salmon Cookies was launched at our flagship location just a block away from where the idea was born.</p>
         </article>
       </section>
@@ -67,11 +68,21 @@
         </article>
          <div class ="columns eight"><img id="mug" src="img/coffee-shop-mug.jpg" /></div>       
       </section>
+      <h4 class="row divider">Locations</h4>
+        <article class="row" id="locations">
+          <ul class="columns twelve" >
+            <li>Pike Place Market: 10:00am - 5:00pm</li>
+            <li>Southcenter Mall: 10:00am - 5:00pm</li>
+            <li>Bellevue Square: 10:00am - 5:00pm</li>
+            <li>SeaTac Airport: 10:00am - 5:00pm</li>
+            <li>Alki: 10:00am - 5:00pm</li>
+          </ul>
+        </article>
       <h4 class="row divider">More about us</h4>
       <section class="row">
         <div class = "columns four" id="menu"><img id="cookie" src="img/cookie.jpg" />Our Menu</div>
         <div class = "columns four"><img id="shirt" src="img/shirt.jpg" />PSC Gear!</div>
-        <div class = "columns four"><img id="family" src="img/family.jpg">Find us at local events!</div>
+        <div class = "columns four"><a href="http://www.salmondays.org"><img id="family" src="img/family.jpg"></a>Find us at local events!</div>
       </section>
     </main>
   </div>

@@ -8,11 +8,19 @@ body {
 
 button {
 	background: none;
-	border: 3 px solid white;
+	border: 1px solid white;
+	color: #63DEEE;
+	margin-right: 1rem;
+}
+button:hover{
+	background-image: url("img/salmon.png");
+	background-size: 100% 100%;
+	color: #63DEEE;
 }
 header {
 	background-color: black;
 	margin-bottom: 1rem;
+	
 }
 p {
 	text-align: justify;
@@ -29,11 +37,25 @@ article {
 section{
 	margin-bottom: 1rem;
 }
+aside{
+	color: black;
+}
+nav{
+	padding-left: 3rem;
+}
+
+ul{
+	list-style: none;
+}
 #titleBox{
 	text-align: center;
 }
 #titleBox > h1 {
 	color: #FECD2A;
+	font-family: 'Amatic SC', cursive;
+	font-size: 8rem;
+	line-height: 4rem;
+	margin-top: 2rem;
 }
 #titleBox > h5 {
 	color: #E07BD5;
@@ -64,4 +86,15 @@ section{
 	font-family: 'Great Vibes', cursive;
 	text-align: center;
 	border-radius: 1rem;
+}
+#locations {
+	padding-top: 3rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(1.1); 
 }
