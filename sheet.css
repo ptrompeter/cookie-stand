@@ -8,11 +8,19 @@ body {
 
 button {
 	background: none;
-	border: 3 px solid white;
+	border: 1px solid white;
+	color: #63DEEE;
+	margin-right: 1rem;
+}
+button:hover{
+	background-image: url("img/salmon.png");
+	background-size: 100% 100%;
+	color: #63DEEE;
 }
 header {
 	background-color: black;
 	margin-bottom: 1rem;
+	
 }
 p {
 	text-align: justify;
@@ -26,26 +34,67 @@ h3 {
 article {
 	background-color: #CAD6EF;
 }
+section{
+	margin-bottom: 1rem;
+}
+aside{
+	color: black;
+}
+nav{
+	padding-left: 3rem;
+}
+
+ul{
+	list-style: none;
+}
 #titleBox{
 	text-align: center;
 }
 #titleBox > h1 {
 	color: #FECD2A;
+	font-family: 'Amatic SC', cursive;
+	font-size: 8rem;
+	line-height: 4rem;
+	margin-top: 2rem;
 }
 #titleBox > h5 {
 	color: #E07BD5;
+	font-family: 'Great Vibes', cursive;
+	font-size: 3rem;
 }
 #pikePlace{
 	width: 100%;
-	margin-bottom: 1rem;
+	/*margin-bottom: 1rem;*/
 }
 #mug{
 	width: 100%;
-	margin-bottom: 1rem;
+/*	margin-bottom: 1rem;*/
+}
+#family{
+	width: 100%;
+}
+#shirt{
+	/*height: 100%;*/
+	width: 100%;
+}
+#cookie{
+	width: 100%;
 }
 .divider {
-	background-color: #CC3A52;
+	background-color: #CC0F29;
 	color: #E79A0B;
+	font-family: 'Great Vibes', cursive;
 	text-align: center;
 	border-radius: 1rem;
+}
+#locations {
+	padding-top: 3rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(1.1); 
 }
